@@ -11,7 +11,6 @@ AnalogClock::AnalogClock(QWidget *parent) : QWidget(parent)
     //计时器timer
     QTimer *timer = new QTimer(this);
     //timeout() 是QTimer中的一个私有非静态函数，不能由用户自己发出
-//  connect(timer,timer->timeout (),this,QWidget::update ());
     connect (timer, SIGNAL(timeout()), this, SLOT(update()));
     connect (timer, SIGNAL(timeout()), this, SLOT(timeChange()));
     //启动或重新启动计时器，函数参数单位为毫秒，
