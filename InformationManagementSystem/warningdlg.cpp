@@ -33,7 +33,14 @@ void WarningDlg::getErrorMessage(QString message)
     label->setFont(font);
     label->setPalette(palette);
 
-    Dlg->setFixedSize(QSize(300,100));//对话框的最小大小，默认大小
+    QSizePolicy sizePolicyDlg = Dlg->sizePolicy();
+    QSizePolicy sizePolicyLabel = label->sizePolicy();
+    sizePolicyDlg.setVerticalPolicy(QSizePolicy::Expanding);
+    sizePolicyLabel.setVerticalPolicy(QSizePolicy::Expanding);
+    Dlg->setSizePolicy(sizePolicyDlg);
+    label->setSizePolicy(sizePolicyLabel);
+
+    Dlg->setMinimumSize(QSize(300,100));//对话框的最小大小，默认大小
     Dlg->setWindowTitle(tr("提示"));
     Dlg->setWindowFlag(Qt::WindowStaysOnTopHint,true);
     Dlg->setLayout(layout);
