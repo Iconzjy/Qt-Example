@@ -1,0 +1,8 @@
+﻿#include "forworld.h"
+#include <QAxObject>
+#include <QAxWidget>
+
+ForWorld::ForWorld(QObject *parent) : QObject(parent)
+{
+    QAxWidget * new Q
+}

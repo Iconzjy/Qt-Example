@@ -1,0 +1,22 @@
+﻿#ifndef INFORMATIONLISTITEM_H
+#define INFORMATIONLISTITEM_H
+
+#include <QWidget>
+#include <QCheckBox>
+#include <QLabel>
+class InformationListItem : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit InformationListItem(QWidget *parent = nullptr, const QString type = "",const QString name = "");
+
+private:
+    QCheckBox* checkBox;
+    QLabel* label_name;
+    QLabel* label_type;
+signals:
+
+public slots:
+};
+
+#endif // INFORMATIONLISTITEM_H

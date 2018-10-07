@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>model/党员发展对象预审.xlsx</file>
+        <file>model/发展对象备案报告.xlsx</file>
+        <file>model/接收预备党员.xlsx</file>
+        <file>model/入党积极分子备案.xlsx</file>
+    </qresource>
+</RCC>
